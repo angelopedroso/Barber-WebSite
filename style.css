@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    padding: 0;
+    padding: 0 10%;
     background: rgb(0, 0, 0);
     color: white;
     position: relative;
@@ -66,25 +66,36 @@ header ul li:last-child{
     box-shadow: 0 0 3px black inset;
 }
 
-.footer{
-
-
-}
-.footer div{
-    background-color: red;
-}
-
-
-#twitter{
-    background: url("Social Icons/Twitter.svg");
-    width: 100px;
-    height: 100px;
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    background: #2E3038;
+    height: 6.2vh;
 }
 
-#github{
-    background: url("Social Icons/Github.svg");
+footer p{
+    float: left;
+    margin-left: 5%;
+    font-size: 1.1rem;
 }
 
-#linkedin{
-    background: url("Social Icons/LinkedIn.svg");
+.social{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 4%;
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translate(-50%, -50%);
+}
+
+.social li{
+    display: inline-block;
+}
+
+.social li a img{
+    width: 3.5vw;
+    height: 3.5vh;
 }
