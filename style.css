@@ -16,6 +16,7 @@ header{
     height: 5vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: default;
+    background: black;
 }
 header p{
     float: left;
@@ -65,13 +66,18 @@ header ul li:last-child{
     color: white;
     box-shadow: 0 0 3px black inset;
 }
+main{
+    min-height: 100vh;
+    padding-bottom: 4rem; 
+}
+
 
 footer{
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 80%;
     background: #2E3038;
-    height: 6.2vh;
+    height: 4rem;
 }
 
 footer p{
@@ -98,4 +104,47 @@ footer p{
 .social li a img{
     width: 3.5vw;
     height: 3.5vh;
+}
+
+.about{
+    display: block;
+}
+
+.about h1{
+    font: 100 3em 'Times New Roman', Times, serif;
+}
+
+.about p{
+    font: 1em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    color: rgb(100, 100, 100);
+}
+
+.logos{
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    margin: 0;
+    padding: 0;
+    margin: 4% 0;
+}
+
+.logos ul{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+}
+
+.logos ul li{
+    float: left;
+    padding-right: 10.8%;
+}
+
+.logos ul li:last-child{
+    padding-right: 0;
 }
