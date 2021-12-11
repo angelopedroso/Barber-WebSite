@@ -13,8 +13,9 @@ body{
 header{
     height: 30vh;
     width: 100%;
-    background: #1A1D22;
-    background-size: 100% 30vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("Logos/Sem\ Título-2.png");
+    background-position: center;
+    background-size: cover;
     position: relative;
 }
 
@@ -36,7 +37,7 @@ header{
     display: inline-block;
     margin-right: 1vw;
     padding-left: .3vw;
-    font-size: 1.2em;
+    font: normal 400 1.2em 'Oswald', 'Roboto', Arial, Helvetica, sans-serif;
     color: #c7c7c7;
     cursor: default;
 }
@@ -67,6 +68,7 @@ header{
 
 .navmenu h2{
     font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
     color:aliceblue;
     position: absolute;
     top: 50%;
@@ -120,7 +122,7 @@ main{
 .exp-box{
     position: relative;
     width: 100%;
-    height: 15vh;
+    height: 12vh;
 }
 
 .exp{
@@ -133,6 +135,7 @@ main{
     top: 00%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 
 
@@ -150,6 +153,7 @@ main{
     float: left;
     margin-left: 3.5%;
     font-family: 'Teko', Arial, Helvetica, sans-serif;
+    cursor: default;
 }
 
 .tc{
@@ -165,7 +169,7 @@ main{
     left: 20%;
     transform: translate(-50%, -50%);
     color: aliceblue;
-    font-size: 2.5em;
+    font-size: 2vw;
     font-weight: 550;
     letter-spacing: .15vw;
     margin-left: 1.2vw;
@@ -174,10 +178,11 @@ main{
 .tc p{
     position: absolute;
     top: 50%;
-    right: 3.3%;
+    right: 4%;
     transform: translateY(-50%);
     color: aliceblue;
-    font-size: 2.5em;
+    font-size: 2vw;
+    margin-left: 1.2vw;
     letter-spacing: .15vw;
 }
 
@@ -187,7 +192,7 @@ main{
     transform: translateY(-50%); 
     color: rgb(253, 74, 74);
     float: left;
-    font-size: 7em;
+    font-size: calc(16px + 5vw);
     font-weight: bold;
 }
 
@@ -197,7 +202,6 @@ main{
     transform: translateY(-50%); 
     color: rgb(253, 74, 74);
     float: left;
-    font-size: 7em;
     font-weight: bold;
 }
 
@@ -209,4 +213,100 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 60vh;
+    width: 100%;
+    background-color: #1A1D22;
+}
+
+.footer-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #0E0F11;
+}
+
+.rdsocial-footer-box{
+    height: 100%;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rdsocial{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rdsocial a, .cred a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-right: .5vw;
+    transition: .15s;
+}
+
+.rdsocial a:last-child{
+    margin-right: 0;
+}
+
+.rdsocial a:hover, .cred a:hover{
+    font-size: 1.3em;
+    color: rgb(253, 74, 74);
+}
+
+.copyright{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.copyright p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font: 500 1.2em 'Oswald', 'Roboto', Arial, sans-serif;
+    color: #868789;
+    cursor: default;
+}
+
+.cred{
+    height: 100%;
+    width: max-content;
+    float: right;
+}
+
+.cred-box{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cred-box p{
+    display: inline-block;
+    font: 300 1em 'Oswald', 'Roboto', Arial, sans-serif;
+    color: #868789;
+    margin-right: 1%;
+    cursor: default;
+}
+
+.cred-box a{
+    margin-right: .2vw;
+    padding-right: 1%;
 }
