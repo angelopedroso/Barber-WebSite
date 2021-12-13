@@ -250,7 +250,7 @@ footer .container-footer .sec p{
 .sci{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 50px);
+    grid-template-columns: repeat(3, 50px);
     gap: 10px;
 }
 
