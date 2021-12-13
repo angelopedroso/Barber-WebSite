@@ -312,6 +312,33 @@ footer .container-footer .sec p{
     letter-spacing: 1px;
 }
 
+footer .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    font-family: 'Oswald', 'Roboto', Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+footer .title h1{
+    font-size: 36px;
+    text-align: center;
+    width: 60%;
+    border-bottom: 1px solid #77787A;
+    line-height: 0.1em;
+    margin: 16px 0 20px;
+}
+
+footer .title .text{
+    background-color: #1A1D22;
+    padding: 0 16px;
+}
+
+footer .title .text span{
+    color: rgb(253, 74, 74);
+}
+
 .copyright{
     width: 100%;
     background-color: #0E0F11;
@@ -319,6 +346,7 @@ footer .container-footer .sec p{
     font-size: 18px;
     text-align: center;
     color: #77787A;
+    cursor: default;
 }
 
 .copyright p{
@@ -432,6 +460,10 @@ footer .container-footer .sec p{
         height: 1px;
         width: 150px;
     }
+
+    footer .title h1{
+        width: 80%;
+    }
 }
 
 @media screen  and (max-width: 520px) {   
@@ -442,6 +474,10 @@ footer .container-footer .sec p{
     .exp-box .sep .content p{
         font-size: 30px;
 
+    }
+
+    footer .title h1{
+        width: 95%;
     }
 
     .copyright .cred{
