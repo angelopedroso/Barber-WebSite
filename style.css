@@ -49,6 +49,10 @@ header{
     display: none;
 }
 
+.hour i .abrcalendar{
+    display: none;
+}
+
 .last{
     float: right;
 }
@@ -482,5 +486,44 @@ footer .title .text span{
 
     .copyright .cred{
         float: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header .hour .last{
+        display: none;
+    }
+
+    header .hour{
+        white-space: nowrap;
+    }
+    header .hour .fa-calendar-alt{
+        position: absolute;
+        top: 2%;
+        right: 1.5%;
+    }
+
+    header .hour .fa-calendar-alt p{
+        display: none;
+    }
+
+    header .hour i .abrcalendar{
+        display: initial;
+    }
+
+    header .hour i p{
+        margin: 0;
+    }
+
+    header .menu{ 
+        margin-top: 15px;
+    }
+
+    header .hour .fa-clock p .brline{
+        display: none;
+    }
+
+    header .hour .fa-clock p span{
+        display: initial;
     }
 }
