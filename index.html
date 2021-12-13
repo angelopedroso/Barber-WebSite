@@ -5,94 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/fbf815ece4.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <div class="container hour">
-            <i class="far fa-clock"><p>08.30 - 11.45 <span>|</span><br class="brline"> 13.30 - 19.30</p></i>
-            <i class="far fa-calendar-alt"><p class="abrcalendar">Seg. - Sáb.</p><p>Segunda - Sábado</p></i>
-            <i class="fas fa-phone last"><p>(51) 99824-9442</p></i>
+<body onload="preload()">
+    <div class="loading">
+        <div class="loading-content">
+            <h2>Salão <span>Du</span>nas</h2>
+            <p>Carregando conteúdo, aguarde!</p>
         </div>
-        <div class="container menu">
-            <nav class="navmenu">
-                <h2>Salão <span>Du</span>nas</h2>
-                <ul>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Preço</a></li>
-                    <li><a href="">Contato</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div class="exp-box">
-            <div class="section exp">
-                <div class="content-exp">
-                    <div class="sep">
-                        <div class="content fr">
-                            <span>35</span>
-                            <p>Anos de Experiência</p>
-                        </div>
-                        <div class="vr"></div>
-                        <div class="content tc">
-                            <span>2</span>
-                            <p>Cabeleireiros Profissionais</p>
+    </div>
+    <div id="webpg">
+        <header>
+            <div class="container hour">
+                <i class="far fa-clock"><p>08.30 - 11.45 <span>|</span><br class="brline"> 13.30 - 19.30</p></i>
+                <i class="far fa-calendar-alt"><p class="abrcalendar">Seg. - Sáb.</p><p>Segunda - Sábado</p></i>
+                <i class="fas fa-phone last"><p>(51) 99824-9442</p></i>
+            </div>
+            <div class="container menu">
+                <nav class="navmenu">
+                    <h2>Salão <span>Du</span>nas</h2>
+                    <ul>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Preço</a></li>
+                        <li><a href="">Contato</a></li>
+                        <li><a href="">Sobre nós</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main>
+            <div class="exp-box">
+                <div class="section exp">
+                    <div class="content-exp">
+                        <div class="sep">
+                            <div class="content fr">
+                                <span>35</span>
+                                <p>Anos de Experiência</p>
+                            </div>
+                            <div class="vr"></div>
+                            <div class="content tc">
+                                <span>2</span>
+                                <p>Cabeleireiros Profissionais</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="title">
-            <h1><span class="text">Salão <span>Du</span>nas</span></h1>
-        </div>
-        <div class="container-footer">
-            <div class="sec social">
-                <h2>Redes Sociais</h2>
-                <ul class="sci">
-                    <li><a href="https://www.facebook.com/people/Salão-Dunas-Cabeleireiros/100057422590302/" target="_blank" alt="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                    <li><a href="#" target="_blank" alt="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=5551998249442" target="_blank" alt="Whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                </ul>  
+        </main>
+    
+        <footer>
+            <div class="title">
+                <h1><span class="text">Salão <span>Du</span>nas</span></h1>
             </div>
-            <div class="sec quicklink">
-                <h2>Navegação Rápida</h2>
-                <ul class="qck">
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Preço</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                </ul>
+            <div class="container-footer">
+                <div class="sec social">
+                    <h2>Redes Sociais</h2>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/people/Salão-Dunas-Cabeleireiros/100057422590302/" target="_blank" alt="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="#" target="_blank" alt="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5551998249442" target="_blank" alt="Whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>  
+                </div>
+                <div class="sec quicklink">
+                    <h2>Navegação Rápida</h2>
+                    <ul class="qck">
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Preço</a></li>
+                        <li><a href="">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <div class="sec contato">
+                    <h2>Contato</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fas fa-map-marked-alt"></i></span>
+                            <span><a href="https://www.google.com.br/maps/place/Salão+Dunas/@-29.3380389,-49.7282507,19z/data=!3m1!4b1!4m5!3m4!1s0x95226984eef0134f:0x86332b81c4fd5300!8m2!3d-29.3380389!4d-49.7277022" target="_blank" alt="Localização">Borges de Medeiros - 314, <br> Centro, Torres-RS</a></span>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-phone"></i></span>
+                            <p><a href="tel:+5551998249442" target="_blank" alt="Contato">(51)99824-9442</a></p>
+                        </li>
+    
+                        <li>
+                            <span><i class="fas fa-envelope"></i></span>
+                            <p><a href="mailto:sandropedroso30@gmail.com" target="_blank" alt="E-mail">sandropedroso30@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="sec contato">
-                <h2>Contato</h2>
-                <ul class="info">
-                    <li>
-                        <span><i class="fas fa-map-marked-alt"></i></span>
-                        <span><a href="https://www.google.com.br/maps/place/Salão+Dunas/@-29.3380389,-49.7282507,19z/data=!3m1!4b1!4m5!3m4!1s0x95226984eef0134f:0x86332b81c4fd5300!8m2!3d-29.3380389!4d-49.7277022" target="_blank" alt="Localização">Borges de Medeiros - 314, <br> Centro, Torres-RS</a></span>
-                    </li>
-                    <li>
-                        <span><i class="fas fa-phone"></i></span>
-                        <p><a href="tel:+5551998249442" target="_blank" alt="Contato">(51)99824-9442</a></p>
-                    </li>
-
-                    <li>
-                        <span><i class="fas fa-envelope"></i></span>
-                        <p><a href="mailto:sandropedroso30@gmail.com" target="_blank" alt="E-mail">sandropedroso30@gmail.com</a></p>
-                    </li>
-                </ul>
+        </footer>
+        <div class="copyright">
+            <p>Salão Dunas © 2022 | Todos os direitos reservados.</p>
+            <div class="cred">
+                <a href="https://github.com/angelopedroso" target="_blank" alt="github creditos"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
-        </div>
-    </footer>
-    <div class="copyright">
-        <p>Salão Dunas © 2022 | Todos os direitos reservados.</p>
-        <div class="cred">
-            <a href="https://github.com/angelopedroso" target="_blank" alt="github creditos"><i class="fab fa-github" aria-hidden="true"></i></a>
         </div>
     </div>
 </body>
