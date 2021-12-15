@@ -12,8 +12,41 @@ body{
     font-family: 'Oswald', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-/*------------------HEADER---------------- */
+:root{
+    --color-dark-main: #0E0F11;
+    --color-dark-secondary: #1A1D22;
+    --color-dark-font-h: aliceblue;
+    --color-dark-font-p: #c7c7c7;
+    --color-dark-font-cp: #77787A;
+    --color-dark-font-a-social: rgba(119, 119, 119, 0.2);
+    --color-dark-font-a-social-hover: rgba(180, 180, 180, 0.2);
 
+    --color-white-main: #eae1e1;
+    --color-white-secondary: #D4D4D4;
+    --color-white-font-h-cp: #000;
+    --color-white-font-p: #202020;
+    --color-white-font-a-social: rgba(0, 0, 0, 0.2);
+    --color-white-font-a-social-hover: rgba(38, 38, 38, 0.3);
+}
+
+.dark{
+    --color-dark-main: #eae1e1;
+    --color-dark-secondary: #D4D4D4;
+    --color-dark-font-h: #000;
+    --color-dark-font-p: #202020;
+    --color-dark-font-cp: #000;
+    --color-dark-font-a-social: rgba(0, 0, 0, 0.2);
+    --color-dark-font-a-social-hover: rgba(38, 38, 38, 0.3);
+
+    --color-white-main: #0E0F11;
+    --color-white-secondary: #1A1D22;
+    --color-white-font-h: aliceblue;
+    --color-white-font-p: #c7c7c7;
+    --color-dark-font-cp: #77787A;
+    --color-white-font-a-social: rgba(119, 119, 119, 0.2);
+    --color-white-font-a-social-hover: rgba(180, 180, 180, 0.2); 
+}
+/*------------------PRE-LOADER---------------- */
 #webpg{
     display: none;
 }
@@ -33,7 +66,7 @@ body{
     to{
         font-size: 3.6em;
     }
-
+    
     from{
         font-size: 3.8em;
     }
@@ -42,12 +75,12 @@ body{
 .loading h2{
     font-size: 3.8em;
     font-family: 'Great Vibes','Gwendolyn', cursive;
-    color:aliceblue;
+    color: aliceblue;
     animation: breath 2s infinite alternate;
 }
 
 .loading p{
-    color:aliceblue;
+    color: aliceblue;
     font-family: 'Oswald', cursive;
     font-size: 1.3em;
     text-align: center;
@@ -58,7 +91,7 @@ body{
     color: rgb(253, 74, 74);
 }
 
-
+/*------------------HEADER---------------- */
 
 header{
     min-height: 30vh;
@@ -69,7 +102,6 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 }
 
 .hour{
@@ -107,27 +139,21 @@ header{
     margin: 0;
 }
 
-.menu{
-    width: 100%;
-    min-height: 15%;
+.navmenu{
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-}
-
-.navmenu{
     width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 15px 50px;
 }
 
 .navmenu h2{
-    float: left;
+    position: relative;
+    display: inline-flex;
+    color:aliceblue;
     font-size: 2.5em;
     font-family: 'Great Vibes','Gwendolyn', cursive;
-    color:aliceblue;
     cursor: default;
 }
 
@@ -135,20 +161,90 @@ header{
     color: rgb(253, 74, 74);
 }
 
-.navmenu ul{
-    margin-top: 12px;
-    list-style: none;
+.rSide{
     display: flex;
-    justify-content: end;
-    flex-wrap: wrap;
+}
+
+.btn{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn ion-icon{
+    font-size: 1.5em;
+    color: #c7c7c7;
+}
+
+.menuToggle ion-icon{
+    font-size: 3em;
+    z-index: 999;
+}
+.btn ion-icon:nth-child(2){
+    display: none;
+}
+
+.btn.active ion-icon:nth-child(2){
+    display: block;
+}
+
+.btn.active ion-icon:nth-child(1){
+    display: none;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #0E0F11;
+    z-index: 3;
+    transition: 0.5s;
+}
+
+.nav.active{
+    left: 0;
+}
+
+.nav li{
+    list-style: none;
+}
+
+.nav li a{
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.nav li a:hover{
+    background-color: #c7c7c7;
+    color: #1A1D22;
+}
+
+/* .navmenu ul{
+    display: flex;
 }
 
 .navmenu ul li{
-    margin: 0 8px;
-}
-
-.navmenu ul li:last-child{
-    margin-right: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
 }
 
 .navmenu ul li a{
@@ -160,7 +256,7 @@ header{
 
 .navmenu ul li a:hover{
     color: rgb(253, 74, 74);
-}
+} */
 
 /*------------------MAIN---------------- */
 
@@ -168,8 +264,8 @@ main{
     position: relative;
     background-color: #0E0F11;
     width: 100%;
-    height: 100vh;
-    padding-top: 30vh;
+    min-height: 100vh;
+    margin-top: 30vh;
 }
 
 .exp-box{
@@ -186,10 +282,10 @@ main{
     width: 70%;
     height: 16vh;
     position: absolute;
-    top: 00%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: hidden;
+    cursor: default;
 }
 
 .exp .content-exp{
@@ -218,6 +314,7 @@ main{
     align-items: center;
     font-size: 36px;
     gap: 8px;
+    padding-top: 15px;    
 }
 
 .exp .content-exp .sep .content span{
@@ -235,6 +332,9 @@ main{
     align-self: center;
 }
 
+img{
+    width: 100%;
+}
 /*-----------------FOOTER---------------- */
 
 footer{
@@ -368,7 +468,7 @@ footer .title{
     justify-content: center;
     align-items: center;
     margin-bottom: 35px;
-    font-family: 'Oswald', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Great Vibes', 'Roboto', Arial, Helvetica, sans-serif;
     color: aliceblue;
 }
 
@@ -453,12 +553,15 @@ footer .title .text span{
     header .navmenu{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        text-align: center;
     }
-
-    header .navmenu ul{
+    header .navmenu h2{
+        justify-self: center;
+        align-self: center;
+    }
+    /* header .navmenu ul{
         justify-content: center;
-    }
+        align-items: center;
+    } */
     header .hour{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -488,6 +591,10 @@ footer .title .text span{
 @media screen  and (max-width: 685px) {
     header .hour .fa-phone{
         width: max-content;
+    }
+
+    .exp .content-exp .sep .content{
+        padding-top: 0;    
     }
 
     .exp .content-exp .sep{
@@ -545,6 +652,10 @@ footer .title .text span{
 }
 
 @media screen and (max-width: 500px) {
+    header .navmenu{
+        padding: 40px 50px;
+    }
+    
     header .hour .last{
         display: none;
     }
@@ -577,4 +688,16 @@ footer .title .text span{
     header .hour .fa-clock p span{
         display: initial;
     }
+}
+
+@media (prefers-color-scheme: dark){
+    .loading, main{
+        background-color: var(--color-dark-main);
+    }
+
+    footer{
+        background-color: var(--color-dark-secondary);
+    }
+
+
 }
