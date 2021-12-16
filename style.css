@@ -44,7 +44,7 @@ body{
     --color-white-secondary: #1A1D22;
     --color-white-font-h: aliceblue;
     --color-white-font-p: #c7c7c7;
-    --color-dark-font-cp: #77787A;
+    --color-dark-font-cp: #636466;
     --color-white-font-a-social: rgba(119, 119, 119, 0.2);
     --color-white-font-a-social-hover: rgba(180, 180, 180, 0.2); 
 }
@@ -126,6 +126,14 @@ body{
     top: initial;
     box-shadow: none;
     animation: lefttoright .5s forwards;
+}
+
+.dft-color h2{
+    color: var(--color-dark-font-h) !important;
+}
+
+.dft-color .btn ion-icon{
+    color: var(--color-dark-font-p) !important;
 }
 
 header{
@@ -505,11 +513,11 @@ footer .title .text span{
 
 .copyright{
     width: 100%;
-    background-color: var(--color-dark-main);
+    background-color: var(--color-dark-font-main);
     padding: 8px 100px;
     font-size: 18px;
     text-align: center;
-    color: #77787A;
+    color: var(--color-dark-font-cp);
     cursor: default;
 }
 
@@ -529,6 +537,70 @@ footer .title .text span{
 .copyright .cred a .fab:hover{
     color: rgb(253, 74, 74);
     font-size: 21.5px;
+}
+
+
+/*  SYSTEM THEME COLOR */
+
+@media (prefers-color-scheme: dark){
+    .loading, .dft-color, .nav, main, .copyright{
+        background-color: var(--color-dark-main);
+    }
+    
+    .nav li a:hover{
+        background-color: var(--color-dark-font-p);
+        color: var(--color-dark-main);
+    }
+    
+    .scrl-color, footer, footer .title .text{
+        background-color: var(--color-dark-secondary);
+    }
+    
+    .loading h2, .loading p, .nav li a, footer .container-footer .sec h2, footer .container-footer .sec p, .info li span, .info a, footer .title{
+        color: var(--color-dark-font-h);
+    }
+    
+    .quicklink .qck li a{
+        color: var(--color-dark-font-p);
+    }
+    
+    .sci li a{
+        background-color: var(--color-dark-font-a-social);
+    }
+    
+    .sci li a:hover{
+        background-color: var(--color-dark-font-a-social-hover);
+    }
+}
+@media (prefers-color-scheme: light){
+    .loading, .dft-color, .nav, main, .copyright {
+        background-color: var(--color-white-main);
+    }
+    
+    .nav li a:hover{
+        background-color: var(--color-white-font-p);
+        color: var(--color-white-main);
+    }
+    
+    .scrl-color, footer, footer .title .text{
+        background-color: var(--color-white-secondary);
+    }
+
+    .loading h2, .loading p, .nav li a, footer .container-footer .sec h2, footer .container-footer .sec p, .info li span, .info a, footer .title{
+        color: var(--color-white-font-h);
+    }
+    
+    .quicklink .qck li a{
+        color: var(--color-white-font-p);
+    }
+    
+    .sci li a{
+        background-color: var(--color-white-font-a-social);
+    }
+
+    .sci li a:hover{
+        background-color: var(--color-white-font-a-social-hover);
+    }
 }
 
 /* RESPONSIVE */
@@ -563,24 +635,14 @@ footer .title .text span{
 }
 
 @media screen and (max-width: 768px) {
-    header .navmenu{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    header .navmenu h2{
-        justify-self: center;
-        align-self: center;
-    }
-    /* header .navmenu ul{
-        justify-content: center;
-        align-items: center;
-    } */
-    header .hour{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    header .hour .fa-clock{
+    header .hour{
+        display: flex;
+    }
+    header .hour .fa-phone{
+        margin-left: auto;
+    }
+    /* header .hour .fa-clock{
         display: table;
     }
 
@@ -594,7 +656,7 @@ footer .title .text span{
 
     header .hour .fa-clock p span{
         display: none;
-    }
+    } */
 
     footer .container-footer{
         grid-template-columns: repeat(1, 1fr);
@@ -641,7 +703,25 @@ footer .title .text span{
     }
 }
 
+@media screen  and (max-width: 610px) { 
+    header .hour .fa-calendar-alt p{
+        display: none;
+    }
+
+    header .hour i .abrcalendar{
+        display: initial;
+    }
+}
+
 @media screen  and (max-width: 530px) {   
+    header .hour .last{
+        display: none;
+    }
+
+    header .hour .fa-calendar-alt{
+        margin-left: auto;
+    }
+
     .exp .content-exp .sep .content span{
         font-size: 65px;
     }
@@ -666,7 +746,7 @@ footer .title .text span{
 
 @media screen and (max-width: 500px) {
     header .navmenu{
-        padding: 40px 50px;
+        padding: 20px 50px;
     }
     
     header .hour .last{
@@ -675,42 +755,38 @@ footer .title .text span{
 
     header .hour{
         white-space: nowrap;
-    }
-    header .hour .fa-calendar-alt{
-        position: absolute;
-        top: 2%;
-        right: 1.5%;
-    }
-
-    header .hour .fa-calendar-alt p{
-        display: none;
-    }
-
-    header .hour i .abrcalendar{
-        display: initial;
+        padding: 8px 10px;
     }
 
     header .hour i p{
         margin: 0;
     }
+}
 
-    header .hour .fa-clock p .brline{
-        display: none;
+@media screen and (max-width: 405px){
+    header .navmenu {
+        padding: 30px 25px 0px 30px;
     }
-
-    header .hour .fa-clock p span{
-        display: initial;
+    
+    header .scrl-color{
+        padding: 15px 25px 15px 30px;
+    }
+    
+    .navmenu h2 {
+        font-size: 2.1em;
     }
 }
 
-@media (prefers-color-scheme: dark){
-    .loading, main{
-        background-color: var(--color-dark-main);
+@media screen and (max-width: 395px){
+    .exp .content-exp .sep {
+        gap: 40px;
     }
-
-    footer{
-        background-color: var(--color-dark-secondary);
+    
+    .exp .content-exp .sep .fr span, .exp .content-exp .sep .tc span{
+        font-size: 50px;
     }
-
-
+    
+    .exp .content-exp .sep .tc p, .exp .content-exp .sep .fr p{
+        font-size: 25px;
+    }
 }

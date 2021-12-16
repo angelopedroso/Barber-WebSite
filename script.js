@@ -11,7 +11,7 @@ dayNight.onclick = function(){
 }
 
 window.addEventListener('scroll', function(){
-    header.classList.toggle('scrl-color', window.scrollY > (15.5*this.window.innerHeight)/100);
+    header.classList.toggle('scrl-color', window.scrollY > (6*this.window.innerHeight)/100);
 });
 
 menuToggle.onclick = function(){
