@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -122,10 +123,11 @@ body{
 }
 
 .dft-color{
-    background-color: var(--color-dark-main);
+    background-color: var(--color-dark-main) !important;
     top: initial;
     box-shadow: none;
-    animation: lefttoright .5s forwards;
+    animation: lefttoright .5s;
+    transition: .5s;
 }
 
 .dft-color h2{
@@ -142,7 +144,7 @@ header{
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("Logos/Sem\ Título-2.png");
     background-position: center;
     background-size: cover;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
 }
@@ -244,7 +246,7 @@ header{
 .nav{
     position: fixed;
     top: 0;
-    left: -100%;
+    transform: translateX(-100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,7 +259,7 @@ header{
 }
 
 .nav.active{
-    left: 0;
+    transform: translateX(0);
 }
 
 .nav li{
@@ -283,10 +285,10 @@ header{
 
 main{
     position: relative;
+    transition: .75s;
     background-color: var(--color-dark-main);
     width: 100%;
     min-height: 100vh;
-    margin-top: 30vh;
 }
 
 .exp-box{
@@ -353,9 +355,6 @@ main{
     align-self: center;
 }
 
-img{
-    width: 100%;
-}
 /*-----------------FOOTER---------------- */
 
 footer{
@@ -365,6 +364,7 @@ footer{
     padding: 50px 100px;
     background: var(--color-dark-secondary);
     cursor: default;
+    transition: .75s;
 }
 
 footer .container-footer{
@@ -505,6 +505,7 @@ footer .title h1{
 footer .title .text{
     background-color: var(--color-dark-secondary);
     padding: 0 16px;
+    transition: .75s;
 }
 
 footer .title .text span{
@@ -763,7 +764,11 @@ footer .title .text span{
     }
 }
 
-@media screen and (max-width: 405px){
+@media screen and (max-width: 434px) and (min-width: 405px) {
+    .exp .content-exp .sep {
+        gap: 36px;
+    }
+
     header .navmenu {
         padding: 30px 25px 0px 30px;
     }
@@ -777,16 +782,29 @@ footer .title .text span{
     }
 }
 
-@media screen and (max-width: 395px){
-    .exp .content-exp .sep {
-        gap: 40px;
+@media screen and (max-width: 395px){    
+    header .navmenu {
+        padding: 20px 23px;
     }
-    
+
+    .exp .content-exp .sep {
+        gap: 25px;
+    }
+
     .exp .content-exp .sep .fr span, .exp .content-exp .sep .tc span{
-        font-size: 50px;
+        font-size: 45px;
     }
     
     .exp .content-exp .sep .tc p, .exp .content-exp .sep .fr p{
-        font-size: 25px;
+        font-size: 22.5px;
+    }
+
+    .navmenu h2 {
+        font-size: 2.1em;
+    }
+
+    .hour p{
+        padding-left: 4px;
+        font-size: 16px;
     }
 }

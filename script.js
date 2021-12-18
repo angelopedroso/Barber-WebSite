@@ -13,6 +13,13 @@ dayNight.onclick = function(){
 window.addEventListener('scroll', function(){
     header.classList.toggle('scrl-color', window.scrollY > (6*this.window.innerHeight)/100);
 });
+  
+document.getElementById("navbar").addEventListener('click', function (event) {
+    menuToggle.classList.remove('active');
+    nav.classList.remove('active');
+    header.classList.remove('dft-color');
+    body.style.overflow = body.style.overflow == "hidden" ? "visible" : "hidden";
+});
 
 menuToggle.onclick = function(){
     menuToggle.classList.toggle('active');
