@@ -523,7 +523,36 @@ main{
 }
 
 .container .pag-content{
-    margin: 20px 0;
+    margin: 20px;
+}
+
+.container .pag-content .box-pag{
+    display: grid;
+    grid-template-columns: 80px 70px 92px 40px;; 
+    justify-content: center;
+    align-items: center;
+    gap: 12%;
+}
+
+.container .pag-content i{
+    font-size: 55px;
+    color: #77787A;
+}
+
+.container .pag-content img{
+    width: 80px;
+}
+
+.container .pag-content .money{
+    width: 39px;
+}
+
+.container .pag-content .pix{
+    width: 90px;
+}
+
+.container .pag-content .master{
+    width: 70px;
 }
 /*-----------------FOOTER---------------- */
 
@@ -988,6 +1017,10 @@ footer .title .text span{
     header .hour i p{
         margin: 0;
     }
+
+    .container .pag-content .box-pag{
+        gap: 8%;
+    }
 }
 
 @media screen and (max-width: 434px){
@@ -1030,6 +1063,12 @@ footer .title .text span{
     .exp .content-exp .sep .content span {
         font-size: 52.5px;
     }
+
+    .container .pag-content .box-pag{
+        grid-template-columns: 92px 70px;
+        gap: 25%;
+        padding-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 395px){    
@@ -1064,5 +1103,9 @@ footer .title .text span{
     
     .container{
         padding: 30px 10px;
+    }
+
+    .container .pag-content .box-pag{
+        gap: 20%;
     }
 }
