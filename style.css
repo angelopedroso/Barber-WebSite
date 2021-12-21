@@ -364,6 +364,43 @@ main{
     align-self: center;
 }
 
+.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about-content .about-text{
+    text-align: center;
+    width: 40%;
+}
+
+.about-content .about-text p{
+    font-size: 1.4em;
+    color: var(--color-dark-font-p);
+}
+
+.about-content .about-img{
+    width: 40%;
+    margin: 20px;
+}
+
+.about-content .about-img .about-img-box{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.about-content .about-img .about-img-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .serv-content{
     display: flex;
     justify-content: space-evenly;
@@ -916,13 +953,6 @@ footer .title .text span{
 
 /* RESPONSIVE */
 
-@media screen and (min-width: 1613px) and (max-width: 1920px) {
-    .container-serv .serv-content{
-        background: url('logos/pngegg.png') no-repeat center;
-        background-size: contain;
-    }
-}
-
 @media screen and (min-width: 1115px) and (max-width: 1455px){
     .container .price-content .box-price {
         grid-template-columns: repeat(1, 1fr);
@@ -955,6 +985,9 @@ footer .title .text span{
         width: 240px;    
     }
 
+    .about-content .about-img .about-img-box {
+        height: 300px;
+    }
 }
 @media screen and (max-width: 991px){
     footer{
@@ -1050,6 +1083,30 @@ footer .title .text span{
 
     .hr-desc{
         width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content .about-text {
+        width: 60%;
+    }
+
+    .about-content .about-img {
+        width: 80%;
+    }
+
+    .container .title h1 {
+        width: 90%;
+    }
+
+    .about-content .about-text {
+        width: 80%;
+    }
+
+    .about-content .about-img {
+        width: 90%;
     }
 }
 
