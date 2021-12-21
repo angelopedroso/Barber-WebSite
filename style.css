@@ -3,6 +3,8 @@
 *{
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -23,6 +25,7 @@ body{
     --color-dark-font-cp: #77787A;
     --color-dark-font-a-social: rgba(119, 119, 119, 0.2);
     --color-dark-font-a-social-hover: rgba(180, 180, 180, 0.2);
+    --color-dark-font-a-hr: rgba(0, 0, 0, 0.9);
 
     --color-white-main: #f1eeee;
     --color-white-secondary: #D4D4D4;
@@ -30,6 +33,7 @@ body{
     --color-white-font-p: #202020;
     --color-white-font-a-social: rgba(0, 0, 0, 0.2);
     --color-white-font-a-social-hover: rgba(38, 38, 38, 0.3);
+    --color-white-font-a-hr: rgba(172, 172, 172, 0.5);
 }
 
 .dark{
@@ -40,14 +44,16 @@ body{
     --color-dark-font-cp: #000;
     --color-dark-font-a-social: rgba(0, 0, 0, 0.2);
     --color-dark-font-a-social-hover: rgba(38, 38, 38, 0.3);
+    --color-dark-font-a-hr: rgba(172, 172, 172, 0.5);
 
     --color-white-main: #0E0F11;
     --color-white-secondary: #1A1D22;
     --color-white-font-h: white;
     --color-white-font-p: #c7c7c7;
-    --color-dark-font-cp: #636466;
+    --color-white-font-cp: #636466;
     --color-white-font-a-social: rgba(119, 119, 119, 0.2);
-    --color-white-font-a-social-hover: rgba(180, 180, 180, 0.2); 
+    --color-white-font-a-social-hover: rgba(180, 180, 180, 0.2);
+    --color-white-font-a-hr: rgba(0, 0, 0, 0.9);
 }
 
 /*------------------PRE-LOADER---------------- */
@@ -290,6 +296,7 @@ main{
     background-color: var(--color-dark-main);
     width: 100%;
     min-height: 100vh;
+    padding-bottom: 40px;
 }
 
 .exp-box{
@@ -322,6 +329,7 @@ main{
 }
 
 .exp .content-exp .sep{
+    position: relative;
     display: grid;
     width: auto;
     height: auto;
@@ -554,6 +562,101 @@ main{
 .container .pag-content .master{
     width: 70px;
 }
+
+#hour{
+    background-image: linear-gradient(var(--color-dark-font-a-hr), var(--color-dark-font-a-hr)), url("Logos/Barber-op1.png");
+    background-position: top;
+    background-size: cover;
+    margin-top: 40px;
+    padding: 30px 0px;
+}
+
+#hour .title span{
+    background-color: transparent;
+}
+
+.container .hour-content{
+    width: 100%;
+}
+
+.container .hour-content .box-hour{ 
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container .hour-content .box-hour .row{
+    display: flex;
+    width: 85%;
+}
+
+.open-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33.3333%;
+    height: 100%;
+}
+
+.open-desc h2{
+    font-size: 1.5em;
+    color: var(--color-dark-font-h);
+    margin-bottom: 15px;
+}
+
+.open-desc p{
+    font-size: 1.1em;
+    color: var(--color-dark-font-p);
+}
+.open-desc p a{
+    text-decoration: none;
+    color: var(--color-dark-font-h);
+}
+
+.open-desc p a:hover{
+    color: rgb(253, 74, 74)
+}
+
+.hr-desc{
+    width: 66.6667%;
+}
+
+.hr-desc ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+.hr-desc li{
+    list-style: none;
+}
+
+.hr-desc li .wkdays{
+    float: left;
+    width: 100%;
+    padding: 20px 8px;
+    border: 1.5px solid rgb(94, 94, 94);
+    text-align: center;
+}
+
+.hr-desc li .wkdays h3{
+    font-size: 1.3em;
+    color: var(--color-dark-font-h);
+    margin-bottom: 5px;
+}
+
+.hr-desc li .wkdays span{
+    font-size: 1em;
+    color: var(--color-dark-font-p);
+}
+
+.hr-desc .sunday{
+    grid-column: span 3;
+}
+
 /*-----------------FOOTER---------------- */
 
 footer{
@@ -712,33 +815,34 @@ footer .title .text span{
 }
 
 .copyright{
+    display: flex;
+    align-items: center;
     width: 100%;
     background-color: var(--color-dark-font-main);
     padding: 8px 100px;
     font-size: 18px;
-    text-align: center;
     color: var(--color-dark-font-cp);
     cursor: default;
 }
 
-.copyright p{
-    display: inline-block;
+.copyright .right{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 .copyright .cred{
-    float: right;
+    margin-left: auto;
 }
 
-.copyright .cred a .fab{
-    color: var(--color-white-main);
-    font-size: 20px;
-    transition: all 0.15s ease;
+.copyright .cred a{
+    color: var(--color-white-secondary);
+    text-decoration: none;
 }
 
-.copyright .cred a .fab:hover{
+.copyright .cred a:hover{
     color: rgb(253, 74, 74);
-    font-size: 21.5px;
 }
-
 
 /*  SYSTEM THEME COLOR */
 
@@ -755,11 +859,11 @@ footer .title .text span{
         background-color: var(--color-dark-secondary);
     }
     
-    .loading h2, .loading p, .nav li a, footer .container-footer .sec h2, footer .container-footer .sec p, .info li span, .info a, footer .title, .container .title, .container .price-content .box-price h2, header .scrl-color h2, header .dft-color h2, .container .serv .info h2{
+    .loading h2, .loading p, .nav li a, footer .container-footer .sec h2, footer .container-footer .sec p, .info li span, .info a, footer .title, .container .title, .container .price-content .box-price h2, header .scrl-color h2, header .dft-color h2, .container .serv .info h2, .container .hour-content .box-hour .row .open-desc h2, .open-desc p a, .hr-desc li .wkdays h3{
         color: var(--color-dark-font-h);
     }
     
-    .quicklink .qck li a, .container .price-content .box-price .prices .opt p, header .scrl-color .btn ion-icon, header .dft-color .btn ion-icon, .container .serv .info p{
+    .quicklink .qck li a, .container .price-content .box-price .prices .opt p, header .scrl-color .btn ion-icon, header .dft-color .btn ion-icon, .container .serv .info p, .open-desc p, .hr-desc li .wkdays span{
         color: var(--color-dark-font-p);
     }
 
@@ -769,6 +873,10 @@ footer .title .text span{
     
     .sci li a:hover{
         background-color: var(--color-dark-font-a-social-hover);
+    }
+
+    #hour{
+        background-image: linear-gradient(var(--color-dark-font-a-hr), var(--color-dark-font-a-hr)), url("./Logos/Barber-op1.png");
     }
 }
 @media (prefers-color-scheme: light){
@@ -785,11 +893,11 @@ footer .title .text span{
         background-color: var(--color-white-secondary);
     }
 
-    .loading h2, .loading p, .nav li a, footer .container-footer .sec h2, footer .container-footer .sec p, .info li span, .info a, footer .title, .container .title, .container .price-content .box-price h2, header .scrl-color h2, header .dft-color h2, .container .serv .info h2{
+    .loading h2, .loading p, .nav li a, footer .container-footer .sec h2, footer .container-footer .sec p, .info li span, .info a, footer .title, .container .title, .container .price-content .box-price h2, header .scrl-color h2, header .dft-color h2, .container .serv .info h2, .container .hour-content .box-hour .row .open-desc h2, .open-desc p a, .hr-desc li .wkdays h3{
         color: var(--color-white-font-h);
     }
     
-    .quicklink .qck li a, .container .price-content .box-price .prices .opt p, header .scrl-color .btn ion-icon, header .dft-color .btn ion-icon, .container .serv .info p{
+    .quicklink .qck li a, .container .price-content .box-price .prices .opt p, header .scrl-color .btn ion-icon, header .dft-color .btn ion-icon, .container .serv .info p, .open-desc p, .hr-desc li .wkdays span{
         color: var(--color-white-font-p);
     }
     
@@ -799,6 +907,10 @@ footer .title .text span{
 
     .sci li a:hover{
         background-color: var(--color-white-font-a-social-hover);
+    }
+
+    #hour{
+        background-image: linear-gradient(var(--color-white-font-a-hr), var(--color-white-font-a-hr)), url("./Logos/Barber-op1.png");
     }
 }
 
@@ -904,6 +1016,41 @@ footer .title .text span{
     .container .serv-content .serv:hover{
         margin: 0;
     }
+
+    .copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .copyright .cred{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .copyright .right {
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .hr-desc ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hr-desc .sunday{
+        grid-column: span 2;
+    }
+
+    .open-desc{
+        width: 80%;
+    }
+
+    .hr-desc{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -917,6 +1064,16 @@ footer .title .text span{
 
     footer .container-footer{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container .hour-content .box-hour .row {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }   
+    
+    .container .hour-content .box-hour .row .open-desc{
+        margin-bottom: 30px;
     }
 }
 
@@ -937,13 +1094,17 @@ footer .title .text span{
     }
 
     .exp .content-exp .sep .fr{
-        position: relative;
-        top: 63%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -77%);
     }
     
     .exp .content-exp .sep .tc{
-        position: relative;
-        bottom: 53%;
+        position: absolute;
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 88%);
     }
 
     .exp .content-exp .sep .content{
@@ -958,6 +1119,14 @@ footer .title .text span{
     footer .title h1{
         width: 80%;
     }
+
+    .hr-desc ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hr-desc .sunday{
+        grid-column: span 1;
+    }
 }
 
 @media screen  and (max-width: 610px) { 
@@ -971,6 +1140,10 @@ footer .title .text span{
 
     .container{
         padding: 30px 30px;        
+    }
+
+    .container .hour-content .box-hour{ 
+        padding: 40px 0px;
     }
 }
 
@@ -993,10 +1166,6 @@ footer .title .text span{
     
     footer .title h1{
         width: 95%;
-    }
-    
-    .copyright .cred{
-        float: none;
     }
 }
 
@@ -1090,6 +1259,14 @@ footer .title .text span{
     
     .exp-box .sep .content p{
         font-size: 22.5px;
+    }
+
+    .exp .content-exp .sep .fr{
+        transform: translate(-50%, -85%);
+    }
+
+    .exp .content-exp .sep .tc{
+        transform: translate(50%, 95%);
     }
 
     .navmenu h2 {
