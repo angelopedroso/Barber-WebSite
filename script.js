@@ -4,6 +4,20 @@ let body = document.querySelector('body');
 let nav = document.querySelector('.nav');
 let btn = document.querySelector('.btn').getElementsByTagName('ion-icon')[0];
 let header = document.querySelector('.navmenu');
+let links = document.getElementsByTagName("a");
+
+
+Array.prototype.forEach.call(links, function(elem) {
+  let elemAttr = elem.getAttribute("href");
+  if(elemAttr && elemAttr.includes("#")) {
+    elem.addEventListener("click", function(ev) {
+      ev.preventDefault();
+      document.getElementById(elemAttr.replace(/#/g, "")).scrollIntoView({
+          behavior: "smooth"
+        });
+    });
+  }
+});
 
 dayNight.onclick = function(){
     body.classList.toggle('dark');
