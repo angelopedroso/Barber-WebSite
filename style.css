@@ -892,7 +892,7 @@ footer .title .text span{
         color: var(--color-dark-main);
     }
     
-    .scrl-color, footer, footer .title .text, .container .serv-content .serv{
+    .scrl-color, footer, footer .title .text, .serv-content .serv{
         background-color: var(--color-dark-secondary);
     }
     
@@ -926,7 +926,7 @@ footer .title .text span{
         color: var(--color-white-main);
     }
     
-    .scrl-color, footer, footer .title .text, .container .serv-content .serv{
+    .scrl-color, footer, footer .title .text, .serv-content .serv{
         background-color: var(--color-white-secondary);
     }
 
