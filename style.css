@@ -1067,6 +1067,7 @@ footer .title .text span{
         position: relative;
         left: 0;
         transform: translateX(0);
+        text-align: center;
     }
 
     .hr-desc ul{
